@@ -1,6 +1,11 @@
+/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/archive.scss
+---------------------------------------------------------------------------------------------------- */
+
 .archive {
 
 	.site-main {
+
+		grid-row-gap: $grid-gap;
 
 		.block-area,
 		.no-results {
@@ -8,14 +13,37 @@
 			margin-bottom: 48px;
 		}
 
-		@include media(">small", "<medium") {
+		@include media(">smaller") {
 			@include columns(2);
+		}
+
+		@include media(">small") {
+			@include columns(3);
 		}
 
 		@include media(">=medium") {
 			@include columns(4);
 		}
+
 	}
+}
+
+.archive.content-sidebar {
+
+	.site-main {
+
+		align-content: start;
+
+		@include media(">=medium") {
+			@include columns(2);
+		}
+
+		@include media(">=large") {
+			@include columns(3);
+		}
+
+	}
+
 }
 
 /* Archive Header
@@ -29,6 +57,10 @@
 
 	& > *:last-child {
 		margin-bottom: 0;
+	}
+
+	.archive-title {
+		font-weight: 700;
 	}
 
 	.search-form {
@@ -64,7 +96,7 @@
 
 .pagination {
 	border-top: 1px solid $border-color;
-	font-size: 16px;
+	font-size: 1.25rem;
 	text-align: center;
 	padding-top: 22px;
 
@@ -102,5 +134,21 @@
 				font-weight: 700;
 			}
 		}
+	}
+	.pagination-previous a,
+	.pagination-next a {
+		text-decoration: none;
+		font-weight: 500;
+		color: $base-color;
+
+		&:hover {
+			color: $highlight;
+		}
+	}
+	.pagination-previous.alignleft {
+		float: left;
+	}
+	.pagination-next.alignright {
+		float: right;
 	}
 }

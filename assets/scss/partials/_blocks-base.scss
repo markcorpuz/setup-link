@@ -1,3 +1,6 @@
+/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/modules/blocks-base.scss
+---------------------------------------------------------------------------------------------------- */
+
 /* Typographical Elements
 --------------------------------------------- */
 
@@ -31,7 +34,7 @@ ul {
 
 code,
 pre {
-	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-family: monospace, serif;
 	font-size: 12px;
 }
 
@@ -75,19 +78,51 @@ p {
 	margin: 0 0 $base-margin;
 	padding: 0;
 
-	&.large,
-	&.has-large-font-size {
-    	@include font-sizes( 21px, 24px );
+	&.huge,
+	&.has-huge-font-size {
+		@extend %fontsize-huge !optional;
+		@extend %lineheight-huge !optional;
 	}
 
-	&.has-normal-font-size {
-		@include font-sizes( 18px, 20px );
+	&.large,
+	&.has-large-font-size {
+		@extend %fontsize-large !optional;
+		@extend %lineheight-large !optional;
+	}
+
+	&.medium,
+	&.has-medium-font-size {
+		@extend %fontsize-medium !optional;
+		@extend %lineheight-medium !optional;
 	}
 
 	&.small,
 	&.has-small-font-size {
-	    font-size: 14px;
+		@extend %fontsize-small !optional;
+		@extend %lineheight-small !optional;
 	}
+
+	&.normal,
+	&.has-normal-font-size {
+		@extend %fontsize-default !optional;
+		@extend %lineheight-default !optional;
+	}
+
+	&.base,
+	&.has-base-font-size {
+		@extend %fontsize-base !optional;
+	}
+
+	&.smaller,
+	&.has-smaller-font-size {
+		@extend %fontsize-smaller !optional;
+	}
+
+	&.tiny,
+	&.has-tiny-font-size {
+		@extend %fontsize-tiny !optional;
+	}
+
 }
 
 /* Headings
@@ -99,17 +134,13 @@ h3,
 h4,
 h5,
 h6 {
-	color: $grey_10;
-	font-family: $serif;
+	font-family: $sans-serif;
 	font-weight: 400;
-	line-height: 1.2;
 	margin: 0 0 16px;
 
 	a {
-		color: $grey_10;
 
 		&:hover {
-			color: $highlight;
 			text-decoration: none;
 		}
 	}
@@ -120,17 +151,29 @@ h6 {
 }
 
 h1 {
-    @include font-sizes( 34px, 42px, 46px );
+	@extend %fontsize-huge !optional;
+	@extend %lineheight-huge !optional;
 }
 
 h2 {
-    @include font-sizes( 26px, 32px, 36px );
+	@extend %fontsize-large !optional;
+	@extend %lineheight-large !optional;
 }
 
 h3 {
-    @include font-sizes( 22px, 26px, 28px );
+	@extend %fontsize-medium !optional;
+	@extend %lineheight-medium !optional;
 }
 
-h4, h5, h6 {
-    @include font-sizes( 18px, 22px );
+h4 {
+	@extend %fontsize-small !optional;
+	@extend %lineheight-small !optional;
+}
+
+h5 {
+	@extend %fontsize-default !optional;
+}
+
+h6 {
+	@extend %fontsize-base !optional;
 }

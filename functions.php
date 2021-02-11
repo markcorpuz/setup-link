@@ -1,9 +1,9 @@
 <?php
 /**
- * Functions
+ * SETUP CHILD | 1.0.0 | 210210 | functions.php
  *
- * @package      EAGenesisChild
- * @author       Bill Erickson
+ * @package      Setup Child
+ * @author       Mark Corpuz
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
@@ -44,7 +44,7 @@ function ea_global_enqueues() {
 
 	// css
 	wp_dequeue_style( 'child-theme' );
-	wp_enqueue_style( 'ea-fonts', ea_theme_fonts_url() );
+	wp_enqueue_style( 'ea-fonts', setup_child_theme_fonts_url() );
 	wp_enqueue_style( 'ea-style', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/main.css' ) );
 }
 add_action( 'wp_enqueue_scripts', 'ea_global_enqueues' );
@@ -54,7 +54,7 @@ add_action( 'wp_enqueue_scripts', 'ea_global_enqueues' );
  *
  */
 function ea_gutenberg_scripts() {
-	wp_enqueue_style( 'ea-fonts', ea_theme_fonts_url() );
+	wp_enqueue_style( 'ea-fonts', setup_child_theme_fonts_url() );
 	wp_enqueue_script( 'ea-editor', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), true );
 }
 add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
@@ -63,8 +63,9 @@ add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
  * Theme Fonts URL
  *
  */
-function ea_theme_fonts_url() {
-	return false;
+function setup_child_theme_fonts_url() {
+	//return false;
+	wp_enqueue_style( 'setup_child_google_font', '//fonts.googleapis.com/css?family=Rubik:300,400,500,700,900|EB+Garamond:400,500,600', array(), genesis_get_theme_version() );
 }
 
 /**
@@ -87,10 +88,12 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/markup.php' );
 	include_once( get_stylesheet_directory() . '/inc/helper-functions.php' );
 	include_once( get_stylesheet_directory() . '/inc/layouts.php' );
+	include_once( get_stylesheet_directory() . '/inc/custom-logo.php' );
 	include_once( get_stylesheet_directory() . '/inc/navigation.php' );
 	include_once( get_stylesheet_directory() . '/inc/loop.php' );
 	include_once( get_stylesheet_directory() . '/inc/author-box.php' );
 	include_once( get_stylesheet_directory() . '/inc/template-tags.php' );
+	include_once( get_stylesheet_directory() . '/inc/items.php' );
 	include_once( get_stylesheet_directory() . '/inc/site-footer.php' );
 
 	// Editor
@@ -129,39 +132,109 @@ function ea_child_theme_setup() {
 	// -- Editor Font Styles
 	add_theme_support( 'editor-font-sizes', array(
 		array(
-			'name'      => __( 'Small', 'ea_genesis_child' ),
-			'shortName' => __( 'S', 'ea_genesis_child' ),
-			'size'      => 14,
-			'slug'      => 'small'
+			'name'      => __( 'Tiny', 'setup_child' ),
+			'shortName' => __( 'T', 'setup_child' ),
+			'size'      => 12,
+			'slug'      => 'tiny'
 		),
 		array(
-			'name'      => __( 'Normal', 'ea_genesis_child' ),
-			'shortName' => __( 'M', 'ea_genesis_child' ),
-			'size'      => 20,
+			'name'      => __( 'Smaller', 'setup_child' ),
+			'shortName' => __( 'S2', 'setup_child' ),
+			'size'      => 14,
+			'slug'      => 'smaller'
+		),
+		array(
+			'name'      => __( 'Base', 'setup_child' ),
+			'shortName' => __( 'B', 'setup_child' ),
+			'size'      => 16,
+			'slug'      => 'base'
+		),
+		array(
+			'name'      => __( 'Normal', 'setup_child' ),
+			'shortName' => __( 'N', 'setup_child' ),
+			'size'      => 18,
 			'slug'      => 'normal'
 		),
 		array(
-			'name'      => __( 'Large', 'ea_genesis_child' ),
-			'shortName' => __( 'L', 'ea_genesis_child' ),
+			'name'      => __( 'Small', 'setup_child' ),
+			'shortName' => __( 'S', 'setup_child' ),
+			'size'      => 20,
+			'slug'      => 'small'
+		),
+		array(
+			'name'      => __( 'Medium', 'setup_child' ),
+			'shortName' => __( 'M', 'setup_child' ),
 			'size'      => 24,
+			'slug'      => 'medium'
+		),
+		array(
+			'name'      => __( 'Large', 'setup_child' ),
+			'shortName' => __( 'L', 'setup_child' ),
+			'size'      => 36,
 			'slug'      => 'large'
+		),
+		array(
+			'name'      => __( 'Huge', 'setup_child' ),
+			'shortName' => __( 'H', 'setup_child' ),
+			'size'      => 48,
+			'slug'      => 'huge'
 		),
 	) );
 
 	// -- Disable Custom Colors
-	add_theme_support( 'disable-custom-colors' );
+	//add_theme_support( 'disable-custom-colors' );
 
 	// -- Editor Color Palette
 	add_theme_support( 'editor-color-palette', array(
 		array(
+			'name'  => __( 'Purple', 'ea_genesis_child' ),
+			'slug'  => 'purple',
+			'color'	=> '#660099',
+		),
+		array(
 			'name'  => __( 'Blue', 'ea_genesis_child' ),
 			'slug'  => 'blue',
-			'color'	=> '#05306F',
+			'color'	=> '#0080ff',
+		),
+		array(
+			'name'  => __( 'Teal', 'ea_genesis_child' ),
+			'slug'  => 'teal',
+			'color'	=> '#00ffff',
+		),
+		array(
+			'name'  => __( 'Red', 'ea_genesis_child' ),
+			'slug'  => 'red',
+			'color'	=> '#FF0000',
+		),
+		array(
+			'name'  => __( 'Orange', 'ea_genesis_child' ),
+			'slug'  => 'orange',
+			'color'	=> '#ff7f00',
+		),
+		array(
+			'name'  => __( 'Yellow', 'ea_genesis_child' ),
+			'slug'  => 'yellow',
+			'color'	=> '#f2d600',
+		),
+		array(
+			'name'  => __( 'Green', 'ea_genesis_child' ),
+			'slug'  => 'green',
+			'color'	=> '#61bd4f',
+		),
+		array(
+			'name'  => __( 'Light Grey', 'ea_genesis_child' ),
+			'slug'  => 'lightgrey',
+			'color' => '#F5F5F5',
 		),
 		array(
 			'name'  => __( 'Grey', 'ea_genesis_child' ),
 			'slug'  => 'grey',
-			'color' => '#FAFAFA',
+			'color' => '#BDBDBD',
+		),
+		array(
+			'name'  => __( 'Dark Grey', 'ea_genesis_child' ),
+			'slug'  => 'darkgrey',
+			'color' => '#616161',
 		),
 	) );
 

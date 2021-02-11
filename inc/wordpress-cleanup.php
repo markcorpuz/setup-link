@@ -1,12 +1,13 @@
 <?php
 /**
- * WordPress Cleanup
+ * SETUP CHILD | 1.0.0 | 210210 | inc/wordpress-cleanup.php
  *
- * @package      EAGenesisChild
- * @author       Bill Erickson
+ * @package      Setup Child
+ * @author       Mark Corpuz
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
+
 
  /**
   * Dont Update the Theme
@@ -68,6 +69,7 @@ function ea_clean_body_classes( $classes ) {
 		'admin-bar',
 		'full-width-content',
 		'content-sidebar',
+		'sidebar-content',
 		'content',
 	];
 

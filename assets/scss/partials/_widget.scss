@@ -1,0 +1,34 @@
+/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/widget.scss
+---------------------------------------------------------------------------------------------------- */
+
+.widget {
+
+	margin-top: 2rem;
+
+	@include media(">=tablet") {
+		margin-top: 2rem;	
+	}
+
+}
+
+.widget:first-child {
+
+	.sidebar & {
+		margin-top: 0;
+	}
+	.footer-widgets & {}
+
+}
+
+.widget-title {
+
+	font-size: .875rem;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	.sidebar & {}
+	.footer-widgets & {}
+
+	@include media(">=tablet") {}
+
+}

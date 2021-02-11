@@ -1,66 +1,126 @@
-// Colors
-$white: #fff;
-$grey_1: #FAFAFA;
-$grey_2: #F5F5F5;
-$grey_3: #EEEEEE;
-$grey_4: #E0E0E0;
-$grey_5: #BDBDBD;
-$grey_6: #9E9E9E;
-$grey_7: #757575;
-$grey_8: #616161;
-$grey_9: #424242;
-$grey_10: #212121;
-$black: #000;
+/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/base.scss
+---------------------------------------------------------------------------------------------------- */
 
-// Brand Colors
+// COLORS
+$white:             #FFF;
+$grey_1:            #FAFAFA;
+$grey_2:            #F5F5F5;
+$grey_3:            #EEEEEE;
+$grey_4:            #E0E0E0;
+$grey_5:            #BDBDBD;
+$grey_6:            #9E9E9E;
+$grey_7:            #757575;
+$grey_8:            #616161;
+$grey_9:            #424242;
+$grey_10:           #212121;
+$black:             #000;
+
+// BRAND COLORS
 $brand_colors: (
-	'blue'	: #05306F,
-	'grey'	: $grey_1,
+  'purple':         #660099,   // first color in array used for default button color
+  'blue':           #0080ff,
+  'teal':           #00ffff,
+  'red':            #FF0000,
+  'orange':         #ff7f00,
+  'yellow':         #f2d600,
+  'green':          #61bd4f,
+  'lightgrey':      $grey_2,
+  'grey':           $grey_5,
+  'darkgrey':       $grey_8,
 );
 @import "../modules/brand-color";
 
-$facebook: #3B5998;
-$twitter: #00B6F1;
-$pinterest: #CB2027;
+// LOGO
+$logo-width:        200px;
 
-$base-color: $grey_9;
-$highlight: brand-color( 'blue' );
-$border-color: $grey_4;
+// EXTRA COLORS
+$facebook:          #3B5998;
+$twitter:           #00B6F1;
+$pinterest:         #CB2027;
 
-// Fonts
-$serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-$sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$base-color:        $grey_9;
+$highlight:         brand-color( 'blue' );
+$border-color:      $grey_4;
 
-// Content
-$content-width: 768px;
-$block-margin: 20px;
+// FONTS
+$serif:             "EB Garamond", serif;
+$sans-serif:        "Rubik", sans-serif;
 
-// Grid
-$grid: grid;
-$grid-width: 1168px;
-$grid-gap: 32px;
-$base-margin: 16px;
-$wrap_edge: $base-margin;
-$margin_2x: $base-margin * 2;
-$margin_4x: $base-margin * 4;
+// BLOCK
+$block-margin:      16px;
 
-// Site Header
-$logo_width: 300px;
-$menu_width: $logo_width + $grid-gap;
-$persistant_mobile: false; // 49px
-$persistent_desktop: false; // 49px
+// WIDTHS
+$tiny-width:        360px;
+$smaller-width:     425px;
+$small-width:       512px;
+$tablet-width:      768px;
+$medium-width:      1024px;
+$large-width:       1280px;
+
+// WIDTHS + GAP
+$small-width-gap:   560px;
+$tablet-width-gap:  816px;
+$medium-width-gap:  1072px;
+$large-width-gap:   1328px;
+
+// GRID
+$grid:              grid;
+$grid-width:        1280px;
+$grid-gap:          24px;
+
+// MARGIN
+$gap:               24px;
+$gap2x:             48px;
+$base-margin:       16px;
+$margin_2x:         $base-margin * 2;
+$margin_4x:         $base-margin * 4;
+
+// LAYOUT
+$sidebar-width:     300px;
+$content-width:     768px;
+$full-width:        768px;
+$cs-width:          $large-width;
+$sc-width:          $large-width;
+
+// SPACE
+$space-zero:        0;
+$space-px:          0.0625; // 1px;
+$space-2px:         0.125;  // 2px;
+$space-tiny:        0.25;   // 4px;
+$space-smaller:     0.5;    // 8px;
+$space-base:        1;      // 16px;
+$space-normal:      1.125;  // 18px;
+$space-small:       1.25;   // 20px;
+$space-medium:      1.5;    // 24px;
+$space-large:       2;      // 32px;
+$space-larger:      2.5;    // 40px;
+$space-huge:        3.125;  // 50px;
+$space-large2x:     4;      // 64px;
+$space-huge2x:      6.25;   // 100px;
+
+// SITE HEADER
+$menu_width:        $logo_width + $grid-gap;
+$persistant_mobile:   false; // 49px
+$persistent_desktop:  false; // 49px
 
 
-// Include Media
+// INCLUDE MEDIA
 $breakpoints: (
-  'phone'  : 360px,
-  'small'  : 768px,
-  'tablet' : 768px, // required for include-media
-  'mobile_menu' : 768px,
-  'medium' : 992px,
-  'large'  : 1200px,
-  'desktop': $grid-width + $grid-gap, // required for include-media
-  'content-width': $content-width + $grid-gap,
+  'phone':          $tiny-width,
+  'tiny':           $tiny-width,
+  'smaller':        $smaller-width,
+  'small':          $small-width,
+  'small-gap':      $small-width-gap,
+  'tablet':         $tablet-width, // required for include-media
+  'tablet-gap':     $tablet-width-gap,
+  'mobile_menu':    $tablet-width,
+  'medium':         $medium-width,
+  'medium-gap':     $medium-width-gap,
+  'large':          $large-width,
+  'large-gap':      $large-width-gap,
+  'large-wgap':     $large-width + $grid-gap,
+  'desktop':        $grid-width + $grid-gap, // required for include-media
+  'content-width':  $content-width + $grid-gap,
 );
 
 @import "../modules/helpers";

@@ -1,9 +1,9 @@
 <?php
 /**
- * Layouts
+ * SETUP CHILD | 1.0.0 | 210210 | inc/layouts.php
  *
- * @package      EAGenesisChild
- * @author       Bill Erickson
+ * @package      Setup Child
+ * @author       Mark Corpuz
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
@@ -12,7 +12,7 @@
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
-genesis_unregister_layout( 'sidebar-content' );
+//genesis_unregister_layout( 'sidebar-content' );
 //genesis_unregister_layout( 'content-sidebar' );
 
 // Add new layouts

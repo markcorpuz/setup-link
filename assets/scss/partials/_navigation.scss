@@ -1,3 +1,6 @@
+/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/navigation.scss
+---------------------------------------------------------------------------------------------------- */
+
 /* Navigation
 ---------------------------------------------------------------------------------------------------- */
 
@@ -10,8 +13,7 @@
 	ul {
 		clear: both;
 		line-height: 1;
-		margin: 0;
-		width: 100%;
+		margin: 0 auto;
 	}
 
 	.menu-item {
@@ -86,15 +88,10 @@
 	}
 
 	@include media(">mobile_menu") {
-		float: right;
-		width: calc( 100% - #{$menu_width} );
-		display: flex;
-		flex-flow: column-reverse nowrap;
 
 		.nav-primary,
 		.nav-secondary {
-			display: flex;
-			justify-content: flex-end;
+			text-align: center;
 		}
 
 		.nav-primary + .nav-secondary {

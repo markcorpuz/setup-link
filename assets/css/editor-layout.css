@@ -1,1 +1,65 @@
-.full-width-content .editor-styles-wrapper .wp-block,.full-width-content .editor-styles-wrapper .editor-post-title__block.wp-block,.full-width-content .editor-styles-wrapper .wp-block-group:not(.narrow) .wp-block-group__inner-container{max-width:1168px}
+/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/base.scss
+---------------------------------------------------------------------------------------------------- */
+/**
+ * Brand Color
+ *
+ */
+/**
+ * Button Reset
+ *
+ */
+/**
+ * Grid, Center Last
+ *
+ */
+/**
+ * Margin, No Edge
+ * Removes left margin from first item, right margin from last item
+ */
+/**
+ * Icon Position
+ *
+ */
+/**
+ * Block Cover
+ * Creates a block that covers the full width/height of parent div. Typically used on a :before pseudo element
+ */
+/**
+ * Placeholder Color
+ *
+ */
+/**
+ * Clearfix
+ *
+ */
+/**
+ * Font Sizes
+ *
+**/
+/**
+ * Columns
+ *
+ */
+/**
+ * Columns, Mobile
+ *
+ */
+/**
+ * Columns, Tablet
+ *
+ */
+/**
+ * Columns, Tablet Up
+ *
+ */
+/**
+ * Columns, Desktop
+ *
+ */
+/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/base-styles.scss
+---------------------------------------------------------------------------------------------------- */
+.full-width-content .editor-styles-wrapper .wp-block,
+.full-width-content .editor-styles-wrapper .editor-post-title__block.wp-block,
+.full-width-content .editor-styles-wrapper .wp-block-group:not(.narrow) .wp-block-group__inner-container {
+  max-width: 1280px;
+}

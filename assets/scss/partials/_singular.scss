@@ -1,5 +1,54 @@
+/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/singular.scss
+---------------------------------------------------------------------------------------------------- */
+
 /* Singular
 ---------------------------------------------------------------------------------------------------- */
+
+// OVERLINE
+//
+// setup_be_overline();
+// setup_be_overline_nolink();
+
+.item.overline {
+
+	.singular .entry-header & {
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: 4px;
+
+		a {
+			color: $grey_8;
+			text-decoration: none;
+
+			&:hover {
+				color: $highlight;
+			}
+		}
+	}
+}
+
+// AUTHOR, DATE, DATEAUTHOR
+
+.item.author,
+.item.date,
+.item.dateauthor {
+
+	.singular .entry-header & {
+		margin-top: 1rem;
+		font-size: 0.875rem;
+
+		a {
+			color: $grey_10;
+			text-decoration: none;
+
+			&:hover {
+				color: $highlight;
+			}
+		}
+	}
+}
 
 /* Entry Content
 --------------------------------------------- */
@@ -90,6 +139,7 @@
 
 }
 
+
 /* Entry Meta
 --------------------------------------------- */
 
@@ -155,6 +205,20 @@
 	}
 }
 
+
+/* Entry Title
+--------------------------------------------- */
+
+.entry-title {
+
+	.singular & {
+		@include font-sizes( 2.25rem, 2.625rem, 3rem );
+		//@include font-sizes( 36px, 42px, 48px );
+		line-height: 1.125;
+	}
+}
+
+
 /* Single Post
 --------------------------------------------- */
 
@@ -181,7 +245,12 @@
 		*:last-child {
 			margin-bottom: 0;
 		}
+
+		.entry-title {
+			font-weight: 700;			
+		}
 	}
+
 }
 
 .after-entry {

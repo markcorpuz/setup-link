@@ -1,144 +1,173 @@
+/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/site-footer.scss
+---------------------------------------------------------------------------------------------------- */
+
 /* Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background: brand-color( 'blue' );
-	padding: 40px 0 10px;
-	position: relative;
 
-	ul {
-		margin-bottom: 30px;
+	padding: 1.5rem;
+
+	@include media(">large") {
+		padding: 3rem;
 	}
 
-	li {
-		list-style-type: none;
-		margin-bottom: 12px;
+	.wrap {
+		margin-right: auto;
+		margin-left: auto;
 	}
 
-	.widget-title {
-		color: $white;
-		font-size: 16px;
-		font-weight: 700;
-		text-transform: uppercase;
-	}
+	background: brand-color( 'darkgrey' );
+	color: $white;
 
 	a {
 		color: $white;
 		text-decoration: none;
 
 		&:hover {
+			color: $white;
 			text-decoration: underline;
 		}
+	}
 
-		svg {
-			fill: $white;
-			@include icon-position( 20px );
-			margin-right: 12px;
+	p {
+		> a {
+			text-decoration: underline;
 		}
 	}
 
-	@include media("<tablet") {
-		.social-links li {
-				display: inline-block;
-				margin: 0;
-		}
+	ul {
+		margin-bottom: 1rem;
+	}
 
-		.social-links .label {
-			display: none;
-		}
+	li {
+		list-style-type: none;
+		//margin-bottom: 0.875rem;
+	}
 
-		.footer-widgets-1 {
-			float: left;
-			width: calc( 50% - 8px );
-		}
-
-		.footer-widgets-2 {
-			float: right;
-			width: calc( 50% - 8px );
-		}
-
-		.footer-widgets-3 {
-			overflow: hidden;
-			width: 100%;
+	& .footer-widgets-1 {
+		@include media("<=medium") {
+			.widget:first-child {
+				margin-top: 0;
+			}
 		}
 	}
 
-	@include media(">=tablet") {
-		.wrap {
-			@include columns( 3, 'div' );
+	& .footer-widgets-2 {
+		@include media("<=small") {
+			.widget:first-child {
+				margin-top: 0;
+			}
+		}
+		@include media("<=smaller") {
+			.widget:first-child {
+				margin-top: 2rem;
+			}
 		}
 	}
+
+	& .footer-widgets-1,
+	& .footer-widgets-2,
+	& .footer-widgets-3 {
+		@include media(">small") {
+			.widget:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.widget {
+		@include media("<=medium") {
+			margin-top: 2rem;
+		}
+	}
+
+	.widget-title {
+		text-transform: uppercase;
+	}
+
+	.wrap {
+		@include media(">smaller") {
+			@include columns(2);
+		}
+
+		@include media(">small") {
+			@include columns(3);
+		}
+	}
+
 }
 
 /* Site Footer
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	background: brand-color( 'blue', 'darken' );
-	color: rgba( $white, .75 );
-	font-size: 14px;
-	padding: 32px 0;
-	text-align: center;
+	.module.copyright {
+		.item.logo {}
+		.item.info {}
+	}
+	.module.credit {
+		.item.info {}
+		.item.logo {}
+	}
+}
+
+.site-footer {
+
+	// BACKGROUND
+	background: brand-color( 'lightgrey' );
+
+	// SPACING
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+	// SHADOW
+	-webkit-box-shadow: inset 5px 15px 10px -15px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 5px 15px 10px -15px rgba(0,0,0,0.15);
+	box-shadow: inset 5px 15px 10px -15px rgba(0,0,0,0.15);
 
 	.wrap > *:last-child {
 		margin-bottom: 0;
 	}
 
-	a {
-		color: rgba( $white, .75 );
+	// COPYRIGHT
+	.module.copyright {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: column;
 
-		&:hover {
-			color: rgba( $white, 1 );
+		@include media("<=medium") {
+			text-align: center;
 		}
+
+		.info {
+			align-self: center;
+			@include font-sizes( 0.875rem, 1rem );
+		}
+		.logo {
+			align-self: center;
+		}
+
 	}
 
-	.footer-links a + a {
-		margin-left: 12px;
-	}
+	// CREDIT
+	.module.credit {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: column;
 
-	.cafemedia {
-		text-transform: uppercase;
-	}
-
-	.backtotop {
-		background: rgba( $black, .75 );
-		border-radius: 3px;
-		display: inline-block;
-		line-height: 20px;
-		padding: 10px;
-		text-decoration: none;
-
-		svg {
-			fill: $white;
-			margin-left: 4px;
-			vertical-align: middle;
+		.info {
+			align-self: center;
+			font-size: 0.875rem;
+		}
+		.logo {
+			margin-top: 1rem;
+			font-size: 0.875rem;
+			align-self: center;
 		}
 
-		&:hover {
-			background: rgba( $black, 1 );
-		}
-	}
-
-	@include media(">=tablet") {
-		text-align: left;
-
-		.footer-left {
-			float: left;
-
-			& > *:last-child {
-				margin-bottom: 0;
-			}
-		}
-
-		.copyright,
-		.footer-links {
-			display: inline-block;
-			margin-right: 20px;
-		}
-
-		.backtotop {
-			float: right;
-		}
 	}
 
 }
