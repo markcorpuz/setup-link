@@ -1,4 +1,4 @@
-/* SETUP CHILD | 1.0.0 | 210226 | assets/scss/partials/singular.scss
+/* SETUP CHILD | 1.0.0 | 210320 | assets/scss/partials/singular.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Singular
@@ -53,9 +53,7 @@
 /* Entry Content
 --------------------------------------------- */
 
-.entry-content {
-	@import "entry-content";
-}
+.entry-content {}
 
 .entry-content > *,
 .block-area > * {

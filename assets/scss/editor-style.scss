@@ -1,4 +1,4 @@
-/* SETUP CHILD | 1.0.0 | 210224 | assets/scss/editor-style.scss
+/* SETUP CHILD | 1.0.0 | 210320 | assets/scss/editor-style.scss
 ---------------------------------------------------------------------------------------------------- */
 
 @import 	"partials/base";
@@ -8,6 +8,15 @@
 @import		"partials/blocks-custom";
 @import		"partials/post-summary";
 @import		"partials/gutenberg";
+
+@import 	"block/setup-child-100/alignwide";
+@import 	"block/setup-child-100/youtube";
+@import 	"block/setup-child-100/cover";
+@import 	"block/setup-child-100/group";
+@import 	"block/setup-child-100/gallery";
+@import 	"block/setup-child-100/paragraph";
+@import 	"block/setup-child-100/heading";
+@import 	"block/setup-child-100/list";
 
 @import 	"selector/setup-child-100/textsize";
 @import 	"selector/setup-child-100/lineheight";
@@ -21,15 +30,7 @@
 @import 	"selector/setup-child-100/padding-all";
 @import 	"selector/setup-child-100/capsule";
 @import 	"selector/setup-child-100/border";
-
-@import 	"selector/setup-child-100/shadow";
 @import 	"selector/setup-child-100/heading";
+@import 	"selector/setup-child-100/list";
+@import 	"selector/setup-child-100/shadow";
 @import 	"selector/setup-child-100/hide";
-
-@import 	"block/setup-child-100/alignwide";
-@import 	"block/setup-child-100/youtube";
-@import 	"block/setup-child-100/cover";
-@import 	"block/setup-child-100/group";
-@import 	"block/setup-child-100/gallery";
-@import 	"block/setup-child-100/paragraph";
-@import 	"block/setup-child-100/heading";
