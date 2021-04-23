@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210210 | partials/archive.php
+ * SETUP CHILD | 1.0.0 | 210423 | partials/archive.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -24,6 +24,8 @@ echo '<article class="module post-summary">';
 		// OVERLINE
 		setup_child_overline();
 		//setup_child_overline_nolink();
+		//setup_child_overline_override();
+		//setup_child_overline_override_nolink();
 		
 		// TITLE
 		setup_child_title();

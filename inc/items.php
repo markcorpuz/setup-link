@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210210 | inc/items.php
+ * SETUP CHILD | 1.0.0 | 210423 | inc/items.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -173,6 +173,28 @@ function setup_child_overline() {
 		echo '<div class="item overline"><a href="' . get_term_link( $term, 'category' ) . '">' . $term->name . '</a></div>';
 }
 function setup_child_overline_nolink() {
+	$term = ea_first_term();
+	if( !empty( $term ) && ! is_wp_error( $term ) )
+		echo '<div class="item overline nolink">' . $term->name . '</div>';
+}
+
+
+/**
+ * OVERLINE OVERRIDE
+ * _LINK
+ * _NOLINK
+ * 
+ */
+
+function setup_child_overline_override() {
+	$s_overline = new SetupOverline();
+	if( empty( $s_overline->setup_overline_taxonomy() ) ) {
+		setup_child_overline();
+	} else {
+		echo $s_overline->setup_overline_taxonomy();
+	}
+}
+function setup_child_overline_override_nolink() {
 	$term = ea_first_term();
 	if( !empty( $term ) && ! is_wp_error( $term ) )
 		echo '<div class="item overline nolink">' . $term->name . '</div>';
