@@ -376,7 +376,8 @@ function setup_child_edit() {
 				// regular link (OR)
 				// return edit_post_link( 'Edit' ); (OR)
 				// you might want to use the URL for other purposes
-				echo '<div class="item edit"><a href="'.get_edit_post_link( get_the_ID() ).'">EDIT</a></div>';	
+				echo '<div class="item edit"><a href="'.get_edit_post_link( get_the_ID() ).'">EDIT</a></div>';
+				break;	
 			}
 		}
 	}
@@ -400,6 +401,7 @@ function setup_child_edit_date_modified() {
 
 			if( current_user_can( $user_type ) ) {
 				echo '<div class="item edit"><a href="'.get_edit_post_link( get_the_ID() ).'">EDIT | '.get_the_modified_date( 'n.j.y' ).'</a></div>';
+				break;
 			}
 		}
 	}
