@@ -1,4 +1,4 @@
-/* SETUP CHILD | 1.0.0 | 210320 | assets/scss/partials/singular.scss
+/* SETUP CHILD | 1.0.0 | 210429 | assets/scss/partials/singular.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Singular
@@ -159,26 +159,6 @@
 /* Entry Meta
 --------------------------------------------- */
 
-.entry-author {
-	font-size: 14px;
-
-	.avatar {
-		border-radius: 50%;
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: 4px;
-	}
-
-	a {
-		color: $base-color;
-		text-decoration: none;
-
-		&:hover {
-			color: $highlight;
-		}
-	}
-}
-
 .breadcrumb {
 	font-size: 16px;
 	margin-bottom: 24px;
@@ -195,29 +175,6 @@
 		border-top: 1px solid $border-color;
 		padding-top: 32px;
 		text-align: center;
-	}
-}
-
-.author-box {
-	position: relative;
-	padding-left: 120px;
-	min-height: 120px;
-
-	.archive & {
-		grid-column: 1 / -1;
-		max-width: $content-width;
-		margin: 0 auto $grid-gap;
-	}
-
-	.author-box-title {
-		@include font-sizes( 22px, 28px );
-	}
-
-	.avatar {
-		border-radius: 50%;
-		position: absolute;
-		top: 0;
-		left: 0;
 	}
 }
 
