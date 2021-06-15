@@ -64,8 +64,8 @@ add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
  *
  */
 function setup_child_theme_fonts_url() {
-	//return false;
-	wp_enqueue_style( 'setup_child_google_font', '//fonts.googleapis.com/css?family=Rubik:300,400,500,700,900|EB+Garamond:400,500,600', array(), genesis_get_theme_version() );
+	return false;
+	//wp_enqueue_style( 'setup_child_google_font', '//fonts.googleapis.com/css?family=Rubik:300,400,500,700,900|EB+Garamond:400,500,600', array(), genesis_get_theme_version() );
 }
 
 /**

@@ -1,5 +1,7 @@
-/* SETUP CHILD | 1.0.0 | 210429 | assets/scss/main.scss
+/* SETUP CHILD | 1.0.0 | 210615 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
+
+@import 	"partials/fontface";
 
 @import 	"partials/base";
 @import 	"partials/reset";
@@ -32,6 +34,7 @@
 @import 	"block/setup-child-100/list";
 
 @import 	"selector/setup-child-100/textsize";
+@import 	"selector/setup-child-100/fontweight";
 @import 	"selector/setup-child-100/lineheight";
 @import 	"selector/setup-child-100/color";
 @import 	"selector/setup-child-100/grid";
