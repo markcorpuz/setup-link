@@ -1,6 +1,6 @@
-/* SETUP CHILD | 1.0.0 | 210615 | assets/scss/main.scss
+/* SETUP CHILD | 1.0.0 | 210618 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
-/*  SETUP-CHILD | 1.0.0 | 210615 | setup-child/fonts/setup-child-100/fontface.scss
+/*  SETUP-CHILD | 1.0.0 | 210616 | assets/scss/partials/fontface.scss
 ---------------------------------------------------------------------------------------------------- */
 /* rubik-300 - latin */
 @font-face {
@@ -2308,7 +2308,7 @@ div.wpforms-container.one-line:after {
   float: right;
 }
 
-/* SETUP CHILD | 1.0.0 | 210429 | assets/scss/partials/singular.scss
+/* SETUP CHILD | 1.0.0 | 210617 | assets/scss/partials/singular.scss
 ---------------------------------------------------------------------------------------------------- */
 /* Singular
 ---------------------------------------------------------------------------------------------------- */
@@ -2345,115 +2345,6 @@ div.wpforms-container.one-line:after {
   color: #0080ff;
 }
 
-/* Entry Content
---------------------------------------------- */
-.entry-content > *,
-.block-area > * {
-  margin: 16px 0;
-  max-width: 100%;
-}
-.entry-content > *:first-child,
-.block-area > *:first-child {
-  margin-top: 0;
-}
-.entry-content > *:last-child,
-.block-area > *:last-child {
-  margin-bottom: 0;
-}
-.full-width-content .entry-content > *.alignwide, .content .entry-content > *.alignwide,
-.full-width-content .block-area > *.alignwide,
-.content .block-area > *.alignwide {
-  margin: calc( 2 * 16px ) calc(50% - 50vw);
-  max-width: 100vw;
-  width: auto;
-}
-@media (min-width: 768px) {
-  .full-width-content .entry-content > *.alignwide, .content .entry-content > *.alignwide,
-.full-width-content .block-area > *.alignwide,
-.content .block-area > *.alignwide {
-    margin: calc( 2 * 16px) calc(25% - 25vw);
-  }
-}
-.full-width-content .entry-content > *.alignfull, .content .entry-content > *.alignfull,
-.full-width-content .block-area > *.alignfull,
-.content .block-area > *.alignfull {
-  margin: calc( 2 * 16px ) calc(50% - 50vw);
-  max-width: 100vw;
-  width: 100vw;
-}
-.full-width-content .entry-content > *:first-child, .content .entry-content > *:first-child,
-.full-width-content .block-area > *:first-child,
-.content .block-area > *:first-child {
-  margin-top: 0;
-}
-.full-width-content .entry-content > *:last-child, .content .entry-content > *:last-child,
-.full-width-content .block-area > *:last-child,
-.content .block-area > *:last-child {
-  margin-bottom: 0;
-}
-.full-width-content .entry-content > *.alignwide.margin-zero-top, .full-width-content .entry-content > *.alignfull.margin-zero-top, .content .entry-content > *.alignwide.margin-zero-top, .content .entry-content > *.alignfull.margin-zero-top,
-.full-width-content .block-area > *.alignwide.margin-zero-top,
-.full-width-content .block-area > *.alignfull.margin-zero-top,
-.content .block-area > *.alignwide.margin-zero-top,
-.content .block-area > *.alignfull.margin-zero-top {
-  margin-top: 0;
-}
-.full-width-content .entry-content > *.alignwide.margin-zero-bottom, .full-width-content .entry-content > *.alignfull.margin-zero-bottom, .content .entry-content > *.alignwide.margin-zero-bottom, .content .entry-content > *.alignfull.margin-zero-bottom,
-.full-width-content .block-area > *.alignwide.margin-zero-bottom,
-.full-width-content .block-area > *.alignfull.margin-zero-bottom,
-.content .block-area > *.alignwide.margin-zero-bottom,
-.content .block-area > *.alignfull.margin-zero-bottom {
-  margin-bottom: 0;
-}
-.entry-content > *.alignleft,
-.block-area > *.alignleft {
-  /*rtl:ignore*/
-  float: left;
-  margin: 0 16px 16px 0;
-}
-.entry-content > *.alignright,
-.block-area > *.alignright {
-  /*rtl:ignore*/
-  float: right;
-  margin: 0 0 16px 16px;
-}
-.entry-content > *.aligncenter,
-.block-area > *.aligncenter {
-  margin-left: auto;
-  margin-right: auto;
-}
-.entry-content > *.wp-block-quote, .entry-content > *.post-listing-block,
-.block-area > *.wp-block-quote,
-.block-area > *.post-listing-block {
-  margin-top: calc( 2 * 16px);
-  margin-bottom: calc( 2 * 16px);
-}
-.entry-content > *.wp-block-search,
-.block-area > *.wp-block-search {
-  max-width: 568px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*
-.entry-content > .alignfull {
-
-	&:first-child {
-		margin-top: -36px;
-		@include media(">=tablet") {
-			margin-top: -48px;
-		}
-	}
-
-	&:last-child {
-		margin-bottom: -36px;
-		@include media(">=tablet") {
-			margin-bottom: -48px;
-		}
-	}
-
-}
-*/
 /* Entry Meta
 --------------------------------------------- */
 .breadcrumb {
@@ -2667,6 +2558,196 @@ div.wpforms-container.one-line:after {
   }
 }
 
+/* SETUP CHILD | 1.0.0 | 210617 | assets/scss/partials/entry-content.scss
+---------------------------------------------------------------------------------------------------- */
+/*
+ul, ol {
+	padding-left: 1.5rem;
+
+	li {
+		padding-bottom: .5rem;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+
+		ul, ol {
+			padding-top: .5rem;
+		}
+	}
+
+	&.wp-block-gallery {
+		padding-left: 0;
+
+		li {
+			padding-bottom: 0;
+		}
+	}
+}
+*/
+.entry-content > *,
+.block-area > * {
+  margin: 16px 0;
+  max-width: 100%;
+}
+.entry-content > *:first-child,
+.block-area > *:first-child {
+  margin-top: 0;
+}
+.entry-content > *:last-child,
+.block-area > *:last-child {
+  margin-bottom: 0;
+}
+.full-width-content .entry-content > *.alignwide, .content .entry-content > *.alignwide,
+.full-width-content .block-area > *.alignwide,
+.content .block-area > *.alignwide {
+  margin: calc( 2 * 16px ) calc(50% - 50vw);
+  max-width: 100vw;
+  width: auto;
+}
+@media (min-width: 1024px) {
+  .full-width-content .entry-content > *.alignwide, .content .entry-content > *.alignwide,
+.full-width-content .block-area > *.alignwide,
+.content .block-area > *.alignwide {
+    margin-right: calc( ( 768px - 1024px ) / 2 );
+    margin-left: calc( ( 768px - 1024px ) / 2 );
+    max-width: 1024px;
+    width: 1024px;
+  }
+}
+.full-width-content .entry-content > *.alignfull, .content .entry-content > *.alignfull,
+.full-width-content .block-area > *.alignfull,
+.content .block-area > *.alignfull {
+  margin: calc( 2 * 16px ) calc(50% - 50vw);
+  max-width: 100vw;
+  width: 100vw;
+}
+.full-width-content .entry-content > *:first-child, .content .entry-content > *:first-child,
+.full-width-content .block-area > *:first-child,
+.content .block-area > *:first-child {
+  margin-top: 0;
+}
+.full-width-content .entry-content > *:last-child, .content .entry-content > *:last-child,
+.full-width-content .block-area > *:last-child,
+.content .block-area > *:last-child {
+  margin-bottom: 0;
+}
+.full-width-content .entry-content > *.alignwide.margin-zero-top, .full-width-content .entry-content > *.alignfull.margin-zero-top, .content .entry-content > *.alignwide.margin-zero-top, .content .entry-content > *.alignfull.margin-zero-top,
+.full-width-content .block-area > *.alignwide.margin-zero-top,
+.full-width-content .block-area > *.alignfull.margin-zero-top,
+.content .block-area > *.alignwide.margin-zero-top,
+.content .block-area > *.alignfull.margin-zero-top {
+  margin-top: 0;
+}
+.full-width-content .entry-content > *.alignwide.margin-zero-bottom, .full-width-content .entry-content > *.alignfull.margin-zero-bottom, .content .entry-content > *.alignwide.margin-zero-bottom, .content .entry-content > *.alignfull.margin-zero-bottom,
+.full-width-content .block-area > *.alignwide.margin-zero-bottom,
+.full-width-content .block-area > *.alignfull.margin-zero-bottom,
+.content .block-area > *.alignwide.margin-zero-bottom,
+.content .block-area > *.alignfull.margin-zero-bottom {
+  margin-bottom: 0;
+}
+.full-width-content .entry-content > *.alignwide.margin-huge-top, .full-width-content .entry-content > *.alignfull.margin-huge-top, .content .entry-content > *.alignwide.margin-huge-top, .content .entry-content > *.alignfull.margin-huge-top,
+.full-width-content .block-area > *.alignwide.margin-huge-top,
+.full-width-content .block-area > *.alignfull.margin-huge-top,
+.content .block-area > *.alignwide.margin-huge-top,
+.content .block-area > *.alignfull.margin-huge-top {
+  margin-top: 3.125rem;
+}
+.full-width-content .entry-content > *.alignwide.margin-huge-bottom, .full-width-content .entry-content > *.alignfull.margin-huge-bottom, .content .entry-content > *.alignwide.margin-huge-bottom, .content .entry-content > *.alignfull.margin-huge-bottom,
+.full-width-content .block-area > *.alignwide.margin-huge-bottom,
+.full-width-content .block-area > *.alignfull.margin-huge-bottom,
+.content .block-area > *.alignwide.margin-huge-bottom,
+.content .block-area > *.alignfull.margin-huge-bottom {
+  margin-bottom: 3.125rem;
+}
+.full-width-content .entry-content > *.alignwide.margin-huge-space, .full-width-content .entry-content > *.alignfull.margin-huge-space, .content .entry-content > *.alignwide.margin-huge-space, .content .entry-content > *.alignfull.margin-huge-space,
+.full-width-content .block-area > *.alignwide.margin-huge-space,
+.full-width-content .block-area > *.alignfull.margin-huge-space,
+.content .block-area > *.alignwide.margin-huge-space,
+.content .block-area > *.alignfull.margin-huge-space {
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
+}
+@media (max-width: 767px) {
+  .full-width-content .entry-content > *.alignwide.margin-huge-space, .full-width-content .entry-content > *.alignfull.margin-huge-space, .content .entry-content > *.alignwide.margin-huge-space, .content .entry-content > *.alignfull.margin-huge-space,
+.full-width-content .block-area > *.alignwide.margin-huge-space,
+.full-width-content .block-area > *.alignfull.margin-huge-space,
+.content .block-area > *.alignwide.margin-huge-space,
+.content .block-area > *.alignfull.margin-huge-space {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+.full-width-content .entry-content > *.alignwide.margin-huge2x-space, .full-width-content .entry-content > *.alignfull.margin-huge2x-space, .content .entry-content > *.alignwide.margin-huge2x-space, .content .entry-content > *.alignfull.margin-huge2x-space,
+.full-width-content .block-area > *.alignwide.margin-huge2x-space,
+.full-width-content .block-area > *.alignfull.margin-huge2x-space,
+.content .block-area > *.alignwide.margin-huge2x-space,
+.content .block-area > *.alignfull.margin-huge2x-space {
+  margin-top: 6.25rem;
+  margin-bottom: 6.25rem;
+}
+@media (max-width: 767px) {
+  .full-width-content .entry-content > *.alignwide.margin-huge2x-space, .full-width-content .entry-content > *.alignfull.margin-huge2x-space, .content .entry-content > *.alignwide.margin-huge2x-space, .content .entry-content > *.alignfull.margin-huge2x-space,
+.full-width-content .block-area > *.alignwide.margin-huge2x-space,
+.full-width-content .block-area > *.alignfull.margin-huge2x-space,
+.content .block-area > *.alignwide.margin-huge2x-space,
+.content .block-area > *.alignfull.margin-huge2x-space {
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
+  }
+}
+.entry-content > * .alignleft, .entry-content > *.alignleft,
+.block-area > * .alignleft,
+.block-area > *.alignleft {
+  /*rtl:ignore*/
+  float: left;
+  margin: 0 16px 16px 0;
+}
+.entry-content > * .alignright, .entry-content > *.alignright,
+.block-area > * .alignright,
+.block-area > *.alignright {
+  /*rtl:ignore*/
+  float: right;
+  margin: 0 0 16px 16px;
+}
+.entry-content > * .aligncenter, .entry-content > *.aligncenter,
+.block-area > * .aligncenter,
+.block-area > *.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+.entry-content > *.wp-block-quote, .entry-content > *.post-listing-block,
+.block-area > *.wp-block-quote,
+.block-area > *.post-listing-block {
+  margin-top: calc( 2 * 16px);
+  margin-bottom: calc( 2 * 16px);
+}
+.entry-content > *.wp-block-search,
+.block-area > *.wp-block-search {
+  max-width: 568px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+.entry-content > .alignfull {
+
+	&:first-child {
+		margin-top: -36px;
+		@include media(">=tablet") {
+			margin-top: -48px;
+		}
+	}
+
+	&:last-child {
+		margin-bottom: -36px;
+		@include media(">=tablet") {
+			margin-bottom: -48px;
+		}
+	}
+
+}
+*/
 /* SETUP CHILD | 1.0.0 | 210429 | assets/scss/partials/author.scss
 ---------------------------------------------------------------------------------------------------- */
 .entry-author {
@@ -2891,7 +2972,7 @@ div.wpforms-container.one-line:after {
   align-self: center;
 }
 
-/* SETUP-BE | 1.0.0 | 200501 | setup-be/block/setup-be-100/alignwide.scss
+/* SETUP-CHILD | 1.0.0 | 210617 | setup-child/block/setup-child-100/alignwide.scss
 ---------------------------------------------------------------------------------------------------- */
 .full-width-content .entry-content > *, .content .entry-content > *,
 .full-width-content .block-area > *,
@@ -2903,6 +2984,14 @@ div.wpforms-container.one-line:after {
   			width: 100vw;
   		}
   */
+}
+@media (max-width: 1071px) {
+  .full-width-content .entry-content > *.alignwide, .content .entry-content > *.alignwide,
+.full-width-content .block-area > *.alignwide,
+.content .block-area > *.alignwide {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 @media (min-width: 1280px) {
   .full-width-content .entry-content > *.alignwide.width-large, .content .entry-content > *.alignwide.width-large,
@@ -2983,7 +3072,7 @@ div.wpforms-container.one-line:after {
   height: 100%;
 }
 
-/* SETUP-CHILD | 1.0.0 | 210211 | setup-be/block/setup-child-100/cover.scss
+/* SETUP-CHILD | 1.0.0 | 210718 | setup-child/block/setup-child-100/cover.scss
 ---------------------------------------------------------------------------------------------------- */
 .wp-block-cover {
   padding: 1.5rem;
@@ -3033,6 +3122,25 @@ div.wpforms-container.one-line:after {
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
+/* SETUP-CHILD | 1.0.0 | 210618 | setup-child/block/setup-child-100/column.scss
+---------------------------------------------------------------------------------------------------- */
+.wp-block-columns.has-background {
+  padding: 2em;
+}
+@media (max-width: 1071px) {
+  .wp-block-columns.has-background {
+    padding: 1.5rem;
+  }
+}
+.wp-block-columns.has-background.padding-zero {
+  padding: 0;
+}
+@media (max-width: 1071px) {
+  .wp-block-columns .wp-block-column:not(:first-child) {
+    margin-left: 1.5rem;
+  }
+}
+
 /* SETUP-BE | 1.0.0 | 200531 | setup-be/block/setup-be-100/gallery.scss
 ---------------------------------------------------------------------------------------------------- */
 .entry-content ul.blocks-gallery-grid,
@@ -3800,7 +3908,7 @@ p.heading-intro, .lineheight-default, p.normal, p.has-normal-font-size {
   width: 1024px;
 }
 
-.maxwidth-medium, .wp-block-cover.inner-container_medium > .wp-block-cover__inner-container, .wp-block-group.inner-container_medium > .wp-block-group__inner-container {
+.maxwidth-medium, .wp-block-cover .wp-block-cover__inner-container, .wp-block-cover.inner-container_medium > .wp-block-cover__inner-container, .wp-block-group.inner-container_medium > .wp-block-group__inner-container {
   max-width: 1024px;
 }
 

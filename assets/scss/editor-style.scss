@@ -1,20 +1,27 @@
-/* SETUP CHILD | 1.0.0 | 210615 | assets/scss/editor-style.scss
+/* SETUP CHILD | 1.0.0 | 210618 | assets/scss/editor-style.scss
 ---------------------------------------------------------------------------------------------------- */
 
 @import 	"partials/fontface";
 
+@import 	"partials/base";
+@import 	"partials/reset";
+
+@import 	"partials/layout";
 @import 	"partials/base";
 @import 	"partials/blocks-base";
 @import		"partials/blocks-core";
 @import		"partials/blocks-plugin";
 @import		"partials/blocks-custom";
 @import		"partials/post-summary";
+@import 	"partials/singular";
+@import 	"partials/entry-content";
 @import		"partials/gutenberg";
 
 @import 	"block/setup-child-100/alignwide";
 @import 	"block/setup-child-100/youtube";
 @import 	"block/setup-child-100/cover";
 @import 	"block/setup-child-100/group";
+@import 	"block/setup-child-100/column";
 @import 	"block/setup-child-100/gallery";
 @import 	"block/setup-child-100/paragraph";
 @import 	"block/setup-child-100/heading";

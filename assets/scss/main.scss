@@ -1,4 +1,4 @@
-/* SETUP CHILD | 1.0.0 | 210615 | assets/scss/main.scss
+/* SETUP CHILD | 1.0.0 | 210618 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 
 @import 	"partials/fontface";
@@ -21,6 +21,7 @@
 @import 	"partials/post-summary";
 @import 	"partials/archive";
 @import 	"partials/singular";
+@import 	"partials/entry-content";
 @import 	"partials/author";
 @import 	"partials/site-footer";
 
@@ -28,6 +29,7 @@
 @import 	"block/setup-child-100/youtube";
 @import 	"block/setup-child-100/cover";
 @import 	"block/setup-child-100/group";
+@import 	"block/setup-child-100/column";
 @import 	"block/setup-child-100/gallery";
 @import 	"block/setup-child-100/paragraph";
 @import 	"block/setup-child-100/heading";
