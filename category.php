@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210210 | archive.php
+ * SETUP CHILD | 1.0.0 | 210210 | category.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -31,7 +31,7 @@ if( get_query_var( 'paged' ) ) {
 }
 
 function setup_add_tag_text() {
-    echo '<h2>ARCHIVE.PHP FILE</h2>';
+    echo '<h2>CATEGORY.PHP FILE</h2>';
 }
 add_action( 'genesis_before_loop', 'setup_add_tag_text' );
 

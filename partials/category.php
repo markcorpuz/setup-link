@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210423 | partials/archive.php
+ * SETUP CHILD | 1.0.0 | 210423 | partials/category.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -11,7 +11,7 @@
 
 echo '<article class="module post-summary">';
 
-	echo '<div>PARTIALS / ARCHIVE</div>';
+	echo '<div>PARTIALS / CATEGORY</div>';
 	// FEATURED IMAGE
 	setup_child_image();
 	//setup_child_image_nolink();
@@ -30,8 +30,6 @@ echo '<article class="module post-summary">';
 		
 		// TITLE
 		setup_child_title();
-		setup_link_display_categories_list();
-		setup_link_display_tags_list();
 		//setup_child_title_nolink();
 
 		// AUTHOR

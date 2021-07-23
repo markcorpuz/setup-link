@@ -11,6 +11,7 @@
 
 echo '<article class="module post-summary">';
 
+	echo '<div>VIEWS/ARCHIVE</div>';
 	// FEATURED IMAGE
 	setup_child_image();
 	//setup_child_image_nolink();

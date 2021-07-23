@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210210 | archive.php
+ * SETUP CHILD | 1.0.0 | 210722 | archive-link.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -29,10 +29,5 @@ add_action( 'genesis_archive_title_descriptions', 'genesis_do_breadcrumbs', 8 );
 if( get_query_var( 'paged' ) ) {
 	remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_intro_text', 12, 3 );
 }
-
-function setup_add_tag_text() {
-    echo '<h2>ARCHIVE.PHP FILE</h2>';
-}
-add_action( 'genesis_before_loop', 'setup_add_tag_text' );
 
 genesis();
