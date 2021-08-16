@@ -71,6 +71,7 @@ function ea_clean_body_classes( $classes ) {
 		'content-sidebar',
 		'sidebar-content',
 		'content',
+		'links',
 	];
 
 	return array_intersect( $classes, $allowed_classes );

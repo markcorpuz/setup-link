@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210722 | archive-link.php
+ * SETUP CHILD | 1.0.0 | 210816 | archive-link.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -16,7 +16,7 @@ add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_c
  *
  */
 function ea_blog_archive_body_class( $classes ) {
-	$classes[] = 'archive';
+	$classes[] = 'links';
 	return $classes;
 }
 add_filter( 'body_class', 'ea_blog_archive_body_class' );
@@ -29,5 +29,10 @@ add_action( 'genesis_archive_title_descriptions', 'genesis_do_breadcrumbs', 8 );
 if( get_query_var( 'paged' ) ) {
 	remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_intro_text', 12, 3 );
 }
+
+function setup_add_tag_text() {
+    echo '<div class="text-sm font-bold" style="text-align:center;">ARCHIVE-LINK.PHP</div>';
+}
+add_action( 'genesis_before_header', 'setup_add_tag_text' );
 
 genesis();

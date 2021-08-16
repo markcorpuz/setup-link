@@ -1,10 +1,15 @@
-/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/post-summary.scss
+/* SETUP-LINK | 1.0.0 | 210729 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
 
 // MODULE POST-SUMMARY
 //
 
-.module.post-summary {}
+.module.post-summary {
+
+	.archive.links & {
+		text-align: center;
+	}
+}
 .module.post-summary.x2 {}
 .module.post-summary.x3 {}
 .module.post-summary.x4 {}

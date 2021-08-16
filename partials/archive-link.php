@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210721 | partials/archive-link.php
+ * SETUP LINK | 1.0.0 | 210816 | partials/archive-link.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -28,10 +28,15 @@ echo '<article class="module post-summary">';
 		//setup_child_overline_override_nolink();
 		
 		// TITLE
-		setup_child_title();
-		//setup_link_display_categories();
-		setup_link_display_categories_list();
-		setup_link_display_tags_list();
+		echo '<div class="text-xs"">partials/archive-link.php</div>';
+		//setup_child_title();
+		//setup_link_title( get_the_ID() );
+        setup_link_title_to_url( get_the_ID() );
+        setup_link_list_taxonomy( get_the_ID(), 'set' );
+        //setup_link_list_taxonomy( get_the_ID(), 'category' );
+        //setup_link_list_taxonomy( get_the_ID(), 'post_tag' );
+		//setup_link_display_categories_list();
+		//setup_link_display_tags_list();
 		//setup_child_title_nolink();
 
 		// AUTHOR

@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210210 | single.php
+ * SETUP CHILD | 1.0.0 | 210816 | single.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -46,10 +46,8 @@ remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 remove_action( 'genesis_after_entry', 'genesis_do_author_box_single', 8 );
 
 function setup_add_tag_text() {
-    echo '<h2>SINGLE.PHP FILE</h2>';
+    echo '<div class="text-sm font-bold" style="text-align:center;">SINGLE.PHP</div>';
 }
-add_action( 'genesis_before_loop', 'setup_add_tag_text' );
-add_action( 'genesis_before_loop', 'setup_link_display_categories_list' );
-add_action( 'genesis_before_loop', 'setup_link_display_tags_list' );
+add_action( 'genesis_before_header', 'setup_add_tag_text' );
 
 genesis();

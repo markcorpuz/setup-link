@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210816 | category.php
+ * SETUP CHILD | 1.0.0 | 210816 | archive-set.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -16,7 +16,7 @@ add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_c
  *
  */
 function ea_blog_archive_body_class( $classes ) {
-	$classes[] = 'archive';
+	$classes[] = 'links';
 	return $classes;
 }
 add_filter( 'body_class', 'ea_blog_archive_body_class' );
@@ -31,7 +31,7 @@ if( get_query_var( 'paged' ) ) {
 }
 
 function setup_add_tag_text() {
-    echo '<div class="text-sm font-bold" style="text-align:center;">CATEGORY.PHP</div>';
+    echo '<div class="text-sm font-bold" style="text-align:center;">ARCHIVE-SET.PHP</div>';
 }
 add_action( 'genesis_before_header', 'setup_add_tag_text' );
 

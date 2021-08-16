@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210816 | category.php
+ * SETUP CHILD | 1.0.0 | 210816 | taxonomy.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -31,7 +31,7 @@ if( get_query_var( 'paged' ) ) {
 }
 
 function setup_add_tag_text() {
-    echo '<div class="text-sm font-bold" style="text-align:center;">CATEGORY.PHP</div>';
+    echo '<div class="text-sm font-bold" style="text-align:center;">TAXONOMY.PHP</div>';
 }
 add_action( 'genesis_before_header', 'setup_add_tag_text' );
 

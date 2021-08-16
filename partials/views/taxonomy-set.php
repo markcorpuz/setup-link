@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210816 | partials/views/archive.php
+ * SETUP CHILD | 1.0.0 | 210816 | partials/views/taxonomy-set.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -28,7 +28,7 @@ echo '<article class="module post-summary">';
 		//setup_child_overline_override_nolink();
 		
 		// TITLE
-		echo '<div class="text-xs"">partials/views/archive.php</div>';
+		echo '<div class="text-xs"">partials/views/taxonomy-set.php</div>';
 		setup_child_title();
 		//setup_child_title_nolink();
 		//setup_child_title_only();

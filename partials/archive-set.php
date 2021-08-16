@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210816 | partials/views/archive.php
+ * SETUP CHILD | 1.0.0 | 210816 | partials/archive-set.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -28,10 +28,9 @@ echo '<article class="module post-summary">';
 		//setup_child_overline_override_nolink();
 		
 		// TITLE
-		echo '<div class="text-xs"">partials/views/archive.php</div>';
+		echo '<div class="text-xs"">partials/archive-set.php</div>';
 		setup_child_title();
 		//setup_child_title_nolink();
-		//setup_child_title_only();
 
 		// AUTHOR
 		//setup_child_author();
@@ -63,11 +62,3 @@ echo '<article class="module post-summary">';
 	echo '</div>';
 
 echo '</article>';
-
-/*
-	Examples:
-	setup_child_image('large');
-	setup_child_bgimage_wtitle( null, 'Custom Text Inputed');
-	setup_child_bgimage_wtitle( null, setup_child_excerpt() );
-	setup_child_bgimage_wtitle( 'thumbnail' , setup_child_title_only() );
- */

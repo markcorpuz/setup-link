@@ -1,4 +1,4 @@
-/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/layout.scss
+/* SETUP LINK | 1.0.0 | 210729 | assets/scss/partials/layout.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Box Sizing
@@ -56,6 +56,10 @@ $percent-content: $content-width * ((100% - $percent-100) / 100%);
 
 	.archive & {
 		max-width: map-get( $breakpoints, 'large' );
+	}
+
+	.archive.links & {
+		max-width: map-get( $breakpoints, 'tablet' );
 	}
 }
 

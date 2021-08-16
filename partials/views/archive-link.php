@@ -1,6 +1,6 @@
 <?php
 /**
- * SETUP CHILD | 1.0.0 | 210423 | partials/archive-link.php
+ * SETUP CHILD | 1.0.0 | 210423 | partials/views/archive-link.php
  *
  * @package      Setup Child
  * @author       Mark Corpuz
@@ -11,9 +11,8 @@
 
 echo '<article class="module post-summary">';
 
-	echo '<div>ARCHIVE-TAG</div>';
 	// FEATURED IMAGE
-	setup_child_image();
+	//setup_child_image();
 	//setup_child_image_nolink();
 	//setup_child_bgimage();
 	//setup_child_bgimage_nolink();
@@ -29,8 +28,10 @@ echo '<article class="module post-summary">';
 		//setup_child_overline_override_nolink();
 		
 		// TITLE
+		echo '<div class="text-xs"">partials/views/archive-link.php</div>';
 		setup_child_title();
 		//setup_child_title_nolink();
+		//setup_child_title_only();
 
 		// AUTHOR
 		//setup_child_author();
@@ -48,17 +49,25 @@ echo '<article class="module post-summary">';
 		//setup_child_date_mdy_time();
 
 		// DATE & AUTHOR
-		setup_child_dateauthor();
+		//setup_child_dateauthor();
 		//setup_child_dateauthor_nolink();
 
 		// EXCERPT
-		setup_child_excerpt();
+		//setup_child_excerpt();
 		//setup_child_excerpt_maxwords();
 
 		// ADMIN
 		//setup_child_edit();
-		setup_child_edit_date_modified();
+		//setup_child_edit_date_modified();
 
 	echo '</div>';
 
 echo '</article>';
+
+/*
+	Examples:
+	setup_child_image('large');
+	setup_child_bgimage_wtitle( null, 'Custom Text Inputed');
+	setup_child_bgimage_wtitle( null, setup_child_excerpt() );
+	setup_child_bgimage_wtitle( 'thumbnail' , setup_child_title_only() );
+ */

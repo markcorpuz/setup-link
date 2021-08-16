@@ -1,4 +1,4 @@
-/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/archive.scss
+/* SETUP LINK | 1.0.0 | 210729 | assets/scss/partials/archive.scss
 ---------------------------------------------------------------------------------------------------- */
 
 .archive {
@@ -26,6 +26,28 @@
 		}
 
 	}
+}
+
+.archive.links {
+
+	.site-main {
+
+		grid-row-gap: 0.5rem;
+
+		@include media(">smaller") {
+			@include columns(1);
+		}
+
+		@include media(">small") {
+			@include columns(1);
+		}
+
+		@include media(">=medium") {
+			@include columns(1);
+		}
+
+	}
+
 }
 
 .archive.content-sidebar {

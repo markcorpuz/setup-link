@@ -9,65 +9,89 @@
 **/
 
 
-/**
- * DISPLAY CATEGORIES
- * Ref: https://developer.wordpress.org/reference/functions/get_the_category/
- * 
- */
+// Go to CPT entry
+function setup_link_title( $pid ) {
 
-function setup_link_display_categories() {
-	$cats = array();
-	foreach (get_the_category($post_id) as $c) {
-		$cat = get_category($c);
-		array_push($cats, $cat->name);
-	}
+	$entry = get_field( 'entry', $pid );
+	if( is_array( $entry ) && setup_link_array_validate( 'title', $entry ) ) {
 
-	if (sizeOf($cats) > 0) {
-		$post_categories = implode(', ', $cats);
-		echo '<div>' . $post_categories . '</div>';
+		global $wp_query;
+		$tag = ( is_singular() || -1 === $wp_query->current_post ) ? 'h3' : 'h2';
+		echo '<' . $tag . ' class="item title"><a href="' . get_the_permalink( $pid ) . '">' . $entry[ "title" ] . '</a></' . $tag . '>';
+
 	} else {
-		//$post_categories = 'No Categories';
+
+		echo setup_child_title();
+
 	}
+
 }
 
 
-/**
- * DISPLAY CATEGORIES LIST
- * Ref: https://developer.wordpress.org/reference/functions/get_the_category_list/
- * 
- */
+// Go to actual Link found in the CPT entry
+function setup_link_title_to_url( $pid ) {
 
-function setup_link_display_categories_list() {
-	echo get_the_category_list();
-}
+	$entry = get_field( 'entry', $pid );
+	if( is_array( $entry ) && setup_link_array_validate( 'title', $entry ) ) {
 
+		global $wp_query;
+		$tag = ( is_singular() || -1 === $wp_query->current_post ) ? 'h3' : 'h2';
 
-/**
- * DISPLAY CATEGORIES
- * Ref: https://wordpress.stackexchange.com/questions/249463/list-categories-assigned-to-a-post
- * 
- */
+		if( setup_link_array_validate( 'target', $entry ) ) {
+			$link_target = ' target="_blank"';
+		} else {
+			$link_target = '';
+		}
 
-function setup_link_display_categories_v2() {
-	$categories = get_the_category();
-	foreach( $categories as $category) {
-	    $name = $category->name;
-	    $category_link = get_category_link( $category->term_id );
+		echo '<' . $tag . ' class="item title"><a href="' . $entry[ "url" ] . '"'.$link_target.'>' . $entry[ "title" ] . '</a></' . $tag . '>';
 
-	    echo "<a href='$category_link'>
-	            <span class=" . esc_attr( $name) . "></span>
-	         </a>";
+	} else {
+
+		echo setup_child_title();
+
 	}
+
 }
 
 
-/**
- * DISPLAY TAGS LIST
- * Ref: https://developer.wordpress.org/reference/functions/get_the_tag_list/
- * 
- */
+// Simple array & key validation
+function setup_link_array_validate( $key, $array ) {
 
-function setup_link_display_tags_list() {
-	//echo get_the_tag_list( sprintf( '<p>%s: ', __( 'Tags', 'textdomain' ) ), ', ', '</p>' );
-	echo get_the_tag_list();
+	if( array_key_exists( $key, $array ) && !empty( $array[ $key ] ) ) {
+		return $array[ $key ];
+	} else {
+		return FALSE; // return nothing
+	}
+
+}
+
+
+// List custom taxonomy associated to the entry
+function setup_link_list_taxonomy( $pid, $taxonomy ) {
+
+	$print = ''; // declare empty variable
+	$counter = 1; // counter for term entry
+
+	$terms_x = get_the_terms( $pid, $taxonomy );
+
+	if( is_array( $terms_x ) ) :
+
+		$term_count = count( $terms_x );
+
+		foreach( $terms_x as $term ) {
+
+			$print .= '<a class="item taxonomy text-xs" href="'.get_term_link( $term->term_taxonomy_id ).'">'.$term->name.'</a>';
+
+			// add coma
+			if( $counter != $term_count ) {
+				$print .= ', ';
+			}
+
+			$counter++;
+		}
+
+	endif;
+
+	echo $print;
+
 }

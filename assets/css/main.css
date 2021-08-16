@@ -554,7 +554,7 @@ template {
   display: none;
 }
 
-/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/layout.scss
+/* SETUP LINK | 1.0.0 | 210729 | assets/scss/partials/layout.scss
 ---------------------------------------------------------------------------------------------------- */
 /* Box Sizing
 --------------------------------------------- */
@@ -585,6 +585,9 @@ input[type=search] {
 }
 .archive .site-inner .wrap {
   max-width: 1280px;
+}
+.archive.links .site-inner .wrap {
+  max-width: 768px;
 }
 
 .content-sidebar .content-area .site-main, .sidebar-content .content-area .site-main {
@@ -1850,8 +1853,12 @@ div.wpforms-container.one-line:after {
   list-style-type: none;
 }
 
-/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/post-summary.scss
+/* SETUP-LINK | 1.0.0 | 210729 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
+.archive.links .module.post-summary {
+  text-align: center;
+}
+
 .module.post-summary .item.image {
   display: block;
   margin-bottom: 1rem;
@@ -2073,7 +2080,7 @@ div.wpforms-container.one-line:after {
   background-color: #0080ff;
 }
 
-/* SETUP CHILD | 1.0.0 | 210210 | assets/scss/partials/archive.scss
+/* SETUP LINK | 1.0.0 | 210729 | assets/scss/partials/archive.scss
 ---------------------------------------------------------------------------------------------------- */
 .archive .site-main {
   grid-row-gap: 24px;
@@ -2154,6 +2161,85 @@ div.wpforms-container.one-line:after {
       width: 100%;
     }
     .archive .site-main header, .archive .site-main nav, .archive .site-main aside, .archive .site-main footer {
+      grid-column: 1/-1;
+    }
+  }
+}
+
+.archive.links .site-main {
+  grid-row-gap: 0.5rem;
+}
+@media (min-width: 426px) {
+  .archive.links .site-main > article {
+    float: left;
+    margin-left: 1.875%;
+    width: 100%;
+  }
+  .archive.links .site-main > article:nth-of-type(1n+1) {
+    clear: both;
+    margin-left: 0;
+  }
+  @supports (display: grid) {
+    .archive.links .site-main {
+      display: grid;
+      grid-column-gap: 24px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .archive.links .site-main > article {
+      margin-left: 0;
+      width: 100%;
+    }
+    .archive.links .site-main header, .archive.links .site-main nav, .archive.links .site-main aside, .archive.links .site-main footer {
+      grid-column: 1/-1;
+    }
+  }
+}
+@media (min-width: 513px) {
+  .archive.links .site-main > article {
+    float: left;
+    margin-left: 1.875%;
+    width: 100%;
+  }
+  .archive.links .site-main > article:nth-of-type(1n+1) {
+    clear: both;
+    margin-left: 0;
+  }
+  @supports (display: grid) {
+    .archive.links .site-main {
+      display: grid;
+      grid-column-gap: 24px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .archive.links .site-main > article {
+      margin-left: 0;
+      width: 100%;
+    }
+    .archive.links .site-main header, .archive.links .site-main nav, .archive.links .site-main aside, .archive.links .site-main footer {
+      grid-column: 1/-1;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .archive.links .site-main > article {
+    float: left;
+    margin-left: 1.875%;
+    width: 100%;
+  }
+  .archive.links .site-main > article:nth-of-type(1n+1) {
+    clear: both;
+    margin-left: 0;
+  }
+  @supports (display: grid) {
+    .archive.links .site-main {
+      display: grid;
+      grid-column-gap: 24px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .archive.links .site-main > article {
+      margin-left: 0;
+      width: 100%;
+    }
+    .archive.links .site-main header, .archive.links .site-main nav, .archive.links .site-main aside, .archive.links .site-main footer {
       grid-column: 1/-1;
     }
   }
@@ -3165,7 +3251,7 @@ h6.has-background {
   padding: 1em;
 }
 
-/* SETUP-BE | 1.0.0 | 210317 | setup-child/block/setup-child-100/list.scss
+/* SETUP-CHILD | 1.0.0 | 210605 | setup-child/block/setup-child-100/list.scss
 ---------------------------------------------------------------------------------------------------- */
 .entry-content ul, .entry-content ol {
   padding-left: 1.5rem;
@@ -3184,6 +3270,13 @@ h6.has-background {
 }
 .entry-content ul.wp-block-gallery li, .entry-content ol.wp-block-gallery li {
   padding-bottom: 0;
+}
+
+.editor-styles-wrapper ul ul,
+.editor-styles-wrapper ul ol,
+.editor-styles-wrapper ol ul,
+.editor-styles-wrapper ol ol {
+  margin-left: 1rem;
 }
 
 /*  SETUP-CHILD | 1.0.0 | 210224 | setup-child/selector/setup-child-100/textsize.scss
