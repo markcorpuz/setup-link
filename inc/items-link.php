@@ -12,7 +12,7 @@
 // Go to CPT entry
 function setup_link_title( $pid ) {
 
-	$entry = get_field( 'entry', $pid );
+	$entry = get_field( 'link_entry', $pid );
 	if( is_array( $entry ) && setup_link_array_validate( 'title', $entry ) ) {
 
 		global $wp_query;
@@ -31,7 +31,7 @@ function setup_link_title( $pid ) {
 // Go to actual Link found in the CPT entry
 function setup_link_title_to_url( $pid ) {
 
-	$entry = get_field( 'entry', $pid );
+	$entry = get_field( 'link_entry', $pid );
 	if( is_array( $entry ) && setup_link_array_validate( 'title', $entry ) ) {
 
 		global $wp_query;

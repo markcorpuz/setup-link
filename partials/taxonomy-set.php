@@ -29,7 +29,12 @@ echo '<article class="module post-summary">';
 		
 		// TITLE
 		echo '<div class="text-xs"">partials/taxonomy-set.php</div>';
-		setup_child_title();
+		//setup_child_title();
+		//setup_link_title( get_the_ID() );
+        setup_link_title_to_url( get_the_ID() );
+        setup_link_list_taxonomy( get_the_ID(), 'set' );
+        //setup_link_list_taxonomy( get_the_ID(), 'category' );
+        //setup_link_list_taxonomy( get_the_ID(), 'post_tag' );
 		//setup_link_display_categories_list();
 		//setup_link_display_tags_list();
 		//setup_child_title_nolink();
